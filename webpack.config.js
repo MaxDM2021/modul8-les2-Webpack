@@ -1,23 +1,22 @@
-
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js',
-      },
-module: {
-rules: [   
-    {
-    test: /\.css$/i,
-    use: ["style-loader", "css-loader"],
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js",
   },
-  ],
-  },
-      devServer: {
-        port: 4444,
-        open: true,
-        stats: 'error-only',
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
+    ],
+  },
+  devServer: {
+    port: 4444,
+    open: true,
+    stats: "errors-only",
+  },
 };
