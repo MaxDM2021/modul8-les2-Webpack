@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   stats: "errors-only",
-  entry: "./src/index.js",
+  entry: "./src/templates/index.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "build"),
@@ -25,7 +25,7 @@ module.exports = {
     ],
   },
   plugins: [
-  new HtmlWebpackPlugin({ template: 'src/index.html' }),
+  new HtmlWebpackPlugin({ template: 'src/templates/index.html' }),
   new MiniCssExtractPlugin({
 
     filename: "styles.css",
